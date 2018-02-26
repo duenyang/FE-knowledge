@@ -177,6 +177,47 @@ img{
 
 <strong>注意: Internet Explorer 9及更早 IE 版本浏览器不支持 column-count 属性。</strong>
 
+### 三栏布局
+
+1. 左右浮动，中间不动.
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+	.left {
+	    float: left;
+	    height: 200px;
+	    width: 100px;
+	    background-color: red;
+	}
+	.right {
+	    width: 200px;
+	    height: 200px;
+	    background-color: blue;
+	    float: right;
+	}
+	.main {
+	    margin-left: 120px;
+	    margin-right: 220px;
+	    height: 200px;
+	    background-color: green;
+	}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="main"></div>
+    </div>
+</body>
+</html>
+```
+
+
+
 
 
 
