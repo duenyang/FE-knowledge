@@ -36,6 +36,7 @@ handler.on('push', function (event) {
         event.payload.repository.name,
         event.payload.ref);
     run_cmd('sh', ['./publish.sh'], function (text) {
+        console.log('git pull complate!');
         console.log(text)
     });
 })
