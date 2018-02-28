@@ -12,5 +12,7 @@
 
 6中ajax方法：`get、post、delete、put、options、head`
 
+数组方法
+
 
 
