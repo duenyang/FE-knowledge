@@ -34,7 +34,8 @@
 		display: inline-block;
 	}
 ```
-<strong>Internet Explorer(甚至 IE8 beta)中无效</strong>
+*Internet Explorer(甚至 IE8 beta)中无效*
+
 
 2. 高度已知时，position: absolute; top: 50%; margin-top: -contentheight;实现
 
@@ -49,7 +50,7 @@
 		margin-top: -120px; /* negative half of the height */
 	}
 ``` 
-<strong>div 在 body 内，当用户缩小浏览器窗口，滚动条不出现</strong>
+*div 在 body 内，当用户缩小浏览器窗口，滚动条不出现*
 
 3. 高度已知时，元素外插入一个父级 div。设置此 div height:50%; margin-bottom:-contentheight; 元素清除浮动，显示在中间
 
@@ -71,6 +72,7 @@
 		position: relative;
 	}
 ```
+
 4. 宽高已知时，这个方法使用了一个 position:absolute，这个 div 被设置为 top:0; bottom:0;。但是因为它有固定高度，其实并不能和上下都间距为 0，因此 margin:auto; 会使它居中。使用 margin:auto;使块级元素垂直居中是很简单的
 
 ```html
@@ -88,7 +90,7 @@
 	    width: 70%;
 	}
 ```
-<strong>缺点第一个和第二个合集</strong>
+*缺点第一个和第二个合集*
 
 5. css3 top: 50%;transform: translateY(-50%);(IE8及以前不支持)
 
@@ -179,7 +181,7 @@ img{
 }
 ```
 
-<strong>注意: Internet Explorer 9及更早 IE 版本浏览器不支持 column-count 属性。</strong>
+*注意: Internet Explorer 9及更早 IE 版本浏览器不支持 column-count 属性。*
 
 ## 三栏布局
 
@@ -261,6 +263,7 @@ img{
 </body>
 </html>
 ```
+
 3. 圣杯布局
 
 ```html
@@ -307,6 +310,7 @@ img{
 </body>
 </html>
 ```
+
 4. flex布局
 ie10+
 ```html
@@ -348,6 +352,7 @@ ie10+
 ```
 [关于flex布局](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?^%$)
 
+
 5. table布局(无法设置栏间距)
 
 ```html
@@ -386,6 +391,7 @@ ie10+
 </body>
 </html>
 ```
+
 6. 绝对定位布局
 ```html
 <!DOCTYPE html>
