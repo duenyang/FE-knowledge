@@ -1,7 +1,11 @@
 #!/bin/sh
 
-echo "publishing..."
+LOG_FILE="/var/log/gitbook_deploy.log"
 
-rm -rf _book_cache
-cp -r _book _book_cache
-gitbook serve
+date >> "$LOG_FILE"
+echo "Start deployment" >>"$LOG_FILE"
+cd /home/FE-interview/
+echo "pulling source code..." >> "$LOG_FILE"
+git pull
+echo "Finished." >>"$LOG_FILE"
+echo >> $LOG_FILE
