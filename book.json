@@ -21,7 +21,7 @@
 
     "pluginsConfig": {
         "sitemap-general": {
-            "prefix": "http://116.196.113.15/"
+            "prefix": "http://116.196.113.15:4000/"
         }
     }
 }
