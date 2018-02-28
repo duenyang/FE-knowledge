@@ -1,7 +1,7 @@
 var http = require('http')
 var createHandler = require('github-webhook-handler')
 var handler = createHandler({
-    path: '/',
+    path: '/webhook',
     secret: 'duenyang'
 })
 // 上面的 secret 保持和 GitHub 后台设置的一致
