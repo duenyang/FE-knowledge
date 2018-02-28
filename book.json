@@ -21,7 +21,7 @@
 
     "pluginsConfig": {
         "sitemap-general": {
-            "prefix": "http://zitiao.org/simple/"
+            "prefix": "http://116.196.113.15/"
         }
     }
 }
