@@ -27,6 +27,7 @@ http.createServer(function (req, res) {
 }).listen(7000)
 
 handler.on('error', function (err) {
+    console.log('错误了!')
     console.error('Error:', err.message)
 })
 
