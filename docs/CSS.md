@@ -12,7 +12,7 @@
 
 ## 实现垂直居中的方法
 
-1. display: table-cell方法
+### 1. display: table-cell方法
 ```html
 	<div id="wrapper">  
     	<div id="cell">
@@ -37,7 +37,7 @@
 *Internet Explorer(甚至 IE8 beta)中无效*
 
 
-2. 高度已知时，position: absolute; top: 50%; margin-top: -contentheight;实现
+### 2. 高度已知时，position: absolute; top: 50%; margin-top: -contentheight;实现
 
 ```html
 	<div class="content"> Content goes here</div>
@@ -52,7 +52,7 @@
 ``` 
 *div 在 body 内，当用户缩小浏览器窗口，滚动条不出现*
 
-3. 高度已知时，元素外插入一个父级 div。设置此 div height:50%; margin-bottom:-contentheight; 元素清除浮动，显示在中间
+### 3. 高度已知时，元素外插入一个父级 div。设置此 div height:50%; margin-bottom:-contentheight; 元素清除浮动，显示在中间
 
 ```html
 	<div id="floater">  
@@ -73,7 +73,7 @@
 	}
 ```
 
-4. 宽高已知时，这个方法使用了一个 position:absolute，这个 div 被设置为 top:0; bottom:0;。但是因为它有固定高度，其实并不能和上下都间距为 0，因此 margin:auto; 会使它居中。使用 margin:auto;使块级元素垂直居中是很简单的
+### 4. 宽高已知时，这个方法使用了一个 position:absolute，这个 div 被设置为 top:0; bottom:0;。但是因为它有固定高度，其实并不能和上下都间距为 0，因此 margin:auto; 会使它居中。使用 margin:auto;使块级元素垂直居中是很简单的
 
 ```html
 	<div id="content"> Content here</div>
@@ -92,19 +92,19 @@
 ```
 *缺点第一个和第二个合集*
 
-5. css3 top: 50%;transform: translateY(-50%);(IE8及以前不支持)
+### 5. css3 top: 50%;transform: translateY(-50%);(IE8及以前不支持)
 
-6. 文本的垂直居中 line-height
+### 6. 文本的垂直居中 line-height
 
 ## 实现水平垂直居中的方法
 
 (方法1和2脱离了文档流)
 
-1. 宽高一定时，margin: auto法，同上文第四种方法
+### 1. 宽高一定时，margin: auto法，同上文第四种方法
 
-2. 宽高一定时，负margin法，position: absolute; margin-top: -contentheight;margin-left: -contentheight;
+### 2. 宽高一定时，负margin法，position: absolute; margin-top: -contentheight;margin-left: -contentheight;
 
-3. 文字图片类使用 display: table-cell法
+### 3. 文字图片类使用 display: table-cell法
 
 ```css
 div{
@@ -119,9 +119,9 @@ img{
 }
 ```
 
-4. css3 top: 50%; left: 50%; transform: translate3d(-50%, -50%);(IE8及以前不支持)
+### 4. css3 top: 50%; left: 50%; transform: translate3d(-50%, -50%);(IE8及以前不支持)
 
-5. 弹性布局，dispaly: flex
+### 5. 弹性布局，dispaly: flex
 
 ```css
 .container{
@@ -141,7 +141,7 @@ img{
  }
 ```
 
-6. 利用`calc`函数进行四则运算(IE9及以上)
+### 6. 利用`calc`函数进行四则运算(IE9及以上)
 
 ```css
 .calc{
@@ -185,7 +185,7 @@ img{
 
 ## 三栏布局
 
-1. 左右浮动，中间不动.
+### 1. 左右浮动，中间不动.
 
 ```html
 <!DOCTYPE html>
@@ -222,7 +222,7 @@ img{
 </html>
 ```
 
-2. 双飞翼布局
+### 2. 双飞翼布局
 
 ```html
 <html lang="en">
@@ -264,7 +264,7 @@ img{
 </html>
 ```
 
-3. 圣杯布局
+### 3. 圣杯布局
 
 ```html
 <!DOCTYPE html>
@@ -311,7 +311,7 @@ img{
 </html>
 ```
 
-4. flex布局
+### 4. flex布局
 ie10+
 ```html
 <!DOCTYPE html>
@@ -353,7 +353,7 @@ ie10+
 [关于flex布局](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?^%$)
 
 
-5. table布局(无法设置栏间距)
+### 5. table布局(无法设置栏间距)
 
 ```html
 <!DOCTYPE html>
@@ -392,7 +392,7 @@ ie10+
 </html>
 ```
 
-6. 绝对定位布局
+### 6. 绝对定位布局
 ```html
 <!DOCTYPE html>
 <html lang="en">

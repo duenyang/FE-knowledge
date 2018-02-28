@@ -199,33 +199,28 @@
 <p><code>absolute</code>&#x3001;<code>relative</code>&#x3001;<code>fixed</code>&#x3001;<code>static</code>&#x3001;<code>inherit</code></p>
 <p><a href="http://www.w3school.com.cn/cssref/pr_class_position.asp" target="_blank">&#x67E5;&#x770B;&#x66F4;&#x591A;&#x5C5E;&#x6027;</a></p>
 <h2 id="&#x5B9E;&#x73B0;&#x5782;&#x76F4;&#x5C45;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;">&#x5B9E;&#x73B0;&#x5782;&#x76F4;&#x5C45;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;</h2>
-<ol>
-<li><p>display: table-cell&#x65B9;&#x6CD5;</p>
-<pre><code class="lang-html"> <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;wrapper&quot;</span>&gt;</span>  
-     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cell&quot;</span>&gt;</span>
-         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span>Content goes here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
- <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<h3 id="1-display-table-cell&#x65B9;&#x6CD5;">1. display: table-cell&#x65B9;&#x6CD5;</h3>
+<pre><code class="lang-html">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;wrapper&quot;</span>&gt;</span>  
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cell&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span>Content goes here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-css"> <span class="hljs-selector-id">#wrapper</span> {
-     <span class="hljs-attribute">display</span>: table;
- }
+<pre><code class="lang-css">    <span class="hljs-selector-id">#wrapper</span> {
+        <span class="hljs-attribute">display</span>: table;
+    }
 
- <span class="hljs-selector-id">#cell</span> {
-     <span class="hljs-attribute">display</span>: table-cell;
-     <span class="hljs-attribute">vertical-align</span>: middle;
- }
+    <span class="hljs-selector-id">#cell</span> {
+        <span class="hljs-attribute">display</span>: table-cell;
+        <span class="hljs-attribute">vertical-align</span>: middle;
+    }
 
- <span class="hljs-selector-class">.content</span>{
-     <span class="hljs-attribute">display</span>: inline-block;
- }
+    <span class="hljs-selector-class">.content</span>{
+        <span class="hljs-attribute">display</span>: inline-block;
+    }
 </code></pre>
 <p><em>Internet Explorer(&#x751A;&#x81F3; IE8 beta)&#x4E2D;&#x65E0;&#x6548;</em></p>
-</li>
-</ol>
-<ol>
-<li>&#x9AD8;&#x5EA6;&#x5DF2;&#x77E5;&#x65F6;&#xFF0C;position: absolute; top: 50%; margin-top: -contentheight;&#x5B9E;&#x73B0;</li>
-</ol>
+<h3 id="2-&#x9AD8;&#x5EA6;&#x5DF2;&#x77E5;&#x65F6;&#xFF0C;position-absolute-top-50-margin-top--contentheight&#x5B9E;&#x73B0;">2. &#x9AD8;&#x5EA6;&#x5DF2;&#x77E5;&#x65F6;&#xFF0C;position: absolute; top: 50%; margin-top: -contentheight;&#x5B9E;&#x73B0;</h3>
 <pre><code class="lang-html">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span> Content goes here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <pre><code class="lang-css">    <span class="hljs-selector-id">#content</span> {
@@ -236,9 +231,7 @@
     }
 </code></pre>
 <p><em>div &#x5728; body &#x5185;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x7F29;&#x5C0F;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;&#xFF0C;&#x6EDA;&#x52A8;&#x6761;&#x4E0D;&#x51FA;&#x73B0;</em></p>
-<ol>
-<li>&#x9AD8;&#x5EA6;&#x5DF2;&#x77E5;&#x65F6;&#xFF0C;&#x5143;&#x7D20;&#x5916;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x7236;&#x7EA7; div&#x3002;&#x8BBE;&#x7F6E;&#x6B64; div height:50%; margin-bottom:-contentheight; &#x5143;&#x7D20;&#x6E05;&#x9664;&#x6D6E;&#x52A8;&#xFF0C;&#x663E;&#x793A;&#x5728;&#x4E2D;&#x95F4;</li>
-</ol>
+<h3 id="3-&#x9AD8;&#x5EA6;&#x5DF2;&#x77E5;&#x65F6;&#xFF0C;&#x5143;&#x7D20;&#x5916;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x7236;&#x7EA7;-div&#x3002;&#x8BBE;&#x7F6E;&#x6B64;-div-height50-margin-bottom-contentheight-&#x5143;&#x7D20;&#x6E05;&#x9664;&#x6D6E;&#x52A8;&#xFF0C;&#x663E;&#x793A;&#x5728;&#x4E2D;&#x95F4;">3. &#x9AD8;&#x5EA6;&#x5DF2;&#x77E5;&#x65F6;&#xFF0C;&#x5143;&#x7D20;&#x5916;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x7236;&#x7EA7; div&#x3002;&#x8BBE;&#x7F6E;&#x6B64; div height:50%; margin-bottom:-contentheight; &#x5143;&#x7D20;&#x6E05;&#x9664;&#x6D6E;&#x52A8;&#xFF0C;&#x663E;&#x793A;&#x5728;&#x4E2D;&#x95F4;</h3>
 <pre><code class="lang-html">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;floater&quot;</span>&gt;</span>  
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span>Content here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -255,9 +248,7 @@
         <span class="hljs-attribute">position</span>: relative;
     }
 </code></pre>
-<ol>
-<li>&#x5BBD;&#x9AD8;&#x5DF2;&#x77E5;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x4E2A; position:absolute&#xFF0C;&#x8FD9;&#x4E2A; div &#x88AB;&#x8BBE;&#x7F6E;&#x4E3A; top:0; bottom:0;&#x3002;&#x4F46;&#x662F;&#x56E0;&#x4E3A;&#x5B83;&#x6709;&#x56FA;&#x5B9A;&#x9AD8;&#x5EA6;&#xFF0C;&#x5176;&#x5B9E;&#x5E76;&#x4E0D;&#x80FD;&#x548C;&#x4E0A;&#x4E0B;&#x90FD;&#x95F4;&#x8DDD;&#x4E3A; 0&#xFF0C;&#x56E0;&#x6B64; margin:auto; &#x4F1A;&#x4F7F;&#x5B83;&#x5C45;&#x4E2D;&#x3002;&#x4F7F;&#x7528; margin:auto;&#x4F7F;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#x5782;&#x76F4;&#x5C45;&#x4E2D;&#x662F;&#x5F88;&#x7B80;&#x5355;&#x7684;</li>
-</ol>
+<h3 id="4-&#x5BBD;&#x9AD8;&#x5DF2;&#x77E5;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x4E2A;-positionabsolute&#xFF0C;&#x8FD9;&#x4E2A;-div-&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;-top0-bottom0&#x3002;&#x4F46;&#x662F;&#x56E0;&#x4E3A;&#x5B83;&#x6709;&#x56FA;&#x5B9A;&#x9AD8;&#x5EA6;&#xFF0C;&#x5176;&#x5B9E;&#x5E76;&#x4E0D;&#x80FD;&#x548C;&#x4E0A;&#x4E0B;&#x90FD;&#x95F4;&#x8DDD;&#x4E3A;-0&#xFF0C;&#x56E0;&#x6B64;-marginauto-&#x4F1A;&#x4F7F;&#x5B83;&#x5C45;&#x4E2D;&#x3002;&#x4F7F;&#x7528;-marginauto&#x4F7F;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#x5782;&#x76F4;&#x5C45;&#x4E2D;&#x662F;&#x5F88;&#x7B80;&#x5355;&#x7684;">4. &#x5BBD;&#x9AD8;&#x5DF2;&#x77E5;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x4E2A; position:absolute&#xFF0C;&#x8FD9;&#x4E2A; div &#x88AB;&#x8BBE;&#x7F6E;&#x4E3A; top:0; bottom:0;&#x3002;&#x4F46;&#x662F;&#x56E0;&#x4E3A;&#x5B83;&#x6709;&#x56FA;&#x5B9A;&#x9AD8;&#x5EA6;&#xFF0C;&#x5176;&#x5B9E;&#x5E76;&#x4E0D;&#x80FD;&#x548C;&#x4E0A;&#x4E0B;&#x90FD;&#x95F4;&#x8DDD;&#x4E3A; 0&#xFF0C;&#x56E0;&#x6B64; margin:auto; &#x4F1A;&#x4F7F;&#x5B83;&#x5C45;&#x4E2D;&#x3002;&#x4F7F;&#x7528; margin:auto;&#x4F7F;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#x5782;&#x76F4;&#x5C45;&#x4E2D;&#x662F;&#x5F88;&#x7B80;&#x5355;&#x7684;</h3>
 <pre><code class="lang-html">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span> Content here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 </code></pre>
 <pre><code class="lang-css">    <span class="hljs-selector-id">#content</span> {
@@ -272,22 +263,13 @@
     }
 </code></pre>
 <p><em>&#x7F3A;&#x70B9;&#x7B2C;&#x4E00;&#x4E2A;&#x548C;&#x7B2C;&#x4E8C;&#x4E2A;&#x5408;&#x96C6;</em></p>
-<ol>
-<li><p>css3 top: 50%;transform: translateY(-50%);(IE8&#x53CA;&#x4EE5;&#x524D;&#x4E0D;&#x652F;&#x6301;)</p>
-</li>
-<li><p>&#x6587;&#x672C;&#x7684;&#x5782;&#x76F4;&#x5C45;&#x4E2D; line-height</p>
-</li>
-</ol>
+<h3 id="5-css3-top-50transform-translatey-50ie8&#x53CA;&#x4EE5;&#x524D;&#x4E0D;&#x652F;&#x6301;">5. css3 top: 50%;transform: translateY(-50%);(IE8&#x53CA;&#x4EE5;&#x524D;&#x4E0D;&#x652F;&#x6301;)</h3>
+<h3 id="6-&#x6587;&#x672C;&#x7684;&#x5782;&#x76F4;&#x5C45;&#x4E2D;-line-height">6. &#x6587;&#x672C;&#x7684;&#x5782;&#x76F4;&#x5C45;&#x4E2D; line-height</h3>
 <h2 id="&#x5B9E;&#x73B0;&#x6C34;&#x5E73;&#x5782;&#x76F4;&#x5C45;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;">&#x5B9E;&#x73B0;&#x6C34;&#x5E73;&#x5782;&#x76F4;&#x5C45;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;</h2>
 <p>(&#x65B9;&#x6CD5;1&#x548C;2&#x8131;&#x79BB;&#x4E86;&#x6587;&#x6863;&#x6D41;)</p>
-<ol>
-<li><p>&#x5BBD;&#x9AD8;&#x4E00;&#x5B9A;&#x65F6;&#xFF0C;margin: auto&#x6CD5;&#xFF0C;&#x540C;&#x4E0A;&#x6587;&#x7B2C;&#x56DB;&#x79CD;&#x65B9;&#x6CD5;</p>
-</li>
-<li><p>&#x5BBD;&#x9AD8;&#x4E00;&#x5B9A;&#x65F6;&#xFF0C;&#x8D1F;margin&#x6CD5;&#xFF0C;position: absolute; margin-top: -contentheight;margin-left: -contentheight;</p>
-</li>
-<li><p>&#x6587;&#x5B57;&#x56FE;&#x7247;&#x7C7B;&#x4F7F;&#x7528; display: table-cell&#x6CD5;</p>
-</li>
-</ol>
+<h3 id="1-&#x5BBD;&#x9AD8;&#x4E00;&#x5B9A;&#x65F6;&#xFF0C;margin-auto&#x6CD5;&#xFF0C;&#x540C;&#x4E0A;&#x6587;&#x7B2C;&#x56DB;&#x79CD;&#x65B9;&#x6CD5;">1. &#x5BBD;&#x9AD8;&#x4E00;&#x5B9A;&#x65F6;&#xFF0C;margin: auto&#x6CD5;&#xFF0C;&#x540C;&#x4E0A;&#x6587;&#x7B2C;&#x56DB;&#x79CD;&#x65B9;&#x6CD5;</h3>
+<h3 id="2-&#x5BBD;&#x9AD8;&#x4E00;&#x5B9A;&#x65F6;&#xFF0C;&#x8D1F;margin&#x6CD5;&#xFF0C;position-absolute-margin-top--contentheightmargin-left--contentheight">2. &#x5BBD;&#x9AD8;&#x4E00;&#x5B9A;&#x65F6;&#xFF0C;&#x8D1F;margin&#x6CD5;&#xFF0C;position: absolute; margin-top: -contentheight;margin-left: -contentheight;</h3>
+<h3 id="3-&#x6587;&#x5B57;&#x56FE;&#x7247;&#x7C7B;&#x4F7F;&#x7528;-display-table-cell&#x6CD5;">3. &#x6587;&#x5B57;&#x56FE;&#x7247;&#x7C7B;&#x4F7F;&#x7528; display: table-cell&#x6CD5;</h3>
 <pre><code class="lang-css"><span class="hljs-selector-tag">div</span>{
     <span class="hljs-attribute">width</span>: <span class="hljs-number">260px</span>;
     <span class="hljs-attribute">height</span>: <span class="hljs-number">230px</span>;
@@ -299,12 +281,8 @@
     <span class="hljs-attribute">vertical-align</span>: middle;
 }
 </code></pre>
-<ol>
-<li><p>css3 top: 50%; left: 50%; transform: translate3d(-50%, -50%);(IE8&#x53CA;&#x4EE5;&#x524D;&#x4E0D;&#x652F;&#x6301;)</p>
-</li>
-<li><p>&#x5F39;&#x6027;&#x5E03;&#x5C40;&#xFF0C;dispaly: flex</p>
-</li>
-</ol>
+<h3 id="4-css3-top-50-left-50-transform-translate3d-50--50ie8&#x53CA;&#x4EE5;&#x524D;&#x4E0D;&#x652F;&#x6301;">4. css3 top: 50%; left: 50%; transform: translate3d(-50%, -50%);(IE8&#x53CA;&#x4EE5;&#x524D;&#x4E0D;&#x652F;&#x6301;)</h3>
+<h3 id="5-&#x5F39;&#x6027;&#x5E03;&#x5C40;&#xFF0C;dispaly-flex">5. &#x5F39;&#x6027;&#x5E03;&#x5C40;&#xFF0C;dispaly: flex</h3>
 <pre><code class="lang-css"><span class="hljs-selector-class">.container</span>{
       <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
       <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;
@@ -321,9 +299,7 @@
       <span class="hljs-attribute">padding</span>: <span class="hljs-number">20px</span>;
  }
 </code></pre>
-<ol>
-<li>&#x5229;&#x7528;<code>calc</code>&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x56DB;&#x5219;&#x8FD0;&#x7B97;(IE9&#x53CA;&#x4EE5;&#x4E0A;)</li>
-</ol>
+<h3 id="6-&#x5229;&#x7528;calc&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x56DB;&#x5219;&#x8FD0;&#x7B97;ie9&#x53CA;&#x4EE5;&#x4E0A;">6. &#x5229;&#x7528;<code>calc</code>&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x56DB;&#x5219;&#x8FD0;&#x7B97;(IE9&#x53CA;&#x4EE5;&#x4E0A;)</h3>
 <pre><code class="lang-css"><span class="hljs-selector-class">.calc</span>{
   <span class="hljs-attribute">position</span>: relative;
 }
@@ -358,9 +334,7 @@
 </code></pre>
 <p><em>&#x6CE8;&#x610F;: Internet Explorer 9&#x53CA;&#x66F4;&#x65E9; IE &#x7248;&#x672C;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x652F;&#x6301; column-count &#x5C5E;&#x6027;&#x3002;</em></p>
 <h2 id="&#x4E09;&#x680F;&#x5E03;&#x5C40;">&#x4E09;&#x680F;&#x5E03;&#x5C40;</h2>
-<ol>
-<li>&#x5DE6;&#x53F3;&#x6D6E;&#x52A8;&#xFF0C;&#x4E2D;&#x95F4;&#x4E0D;&#x52A8;.</li>
-</ol>
+<h3 id="1-&#x5DE6;&#x53F3;&#x6D6E;&#x52A8;&#xFF0C;&#x4E2D;&#x95F4;&#x4E0D;&#x52A8;">1. &#x5DE6;&#x53F3;&#x6D6E;&#x52A8;&#xFF0C;&#x4E2D;&#x95F4;&#x4E0D;&#x52A8;.</h3>
 <pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
@@ -394,9 +368,7 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<ol>
-<li>&#x53CC;&#x98DE;&#x7FFC;&#x5E03;&#x5C40;</li>
-</ol>
+<h3 id="2-&#x53CC;&#x98DE;&#x7FFC;&#x5E03;&#x5C40;">2. &#x53CC;&#x98DE;&#x7FFC;&#x5E03;&#x5C40;</h3>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
@@ -435,9 +407,7 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<ol>
-<li>&#x5723;&#x676F;&#x5E03;&#x5C40;</li>
-</ol>
+<h3 id="3-&#x5723;&#x676F;&#x5E03;&#x5C40;">3. &#x5723;&#x676F;&#x5E03;&#x5C40;</h3>
 <pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
@@ -481,49 +451,46 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<ol>
-<li>flex&#x5E03;&#x5C40;
-ie10+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<h3 id="4-flex&#x5E03;&#x5C40;">4. flex&#x5E03;&#x5C40;</h3>
+<p>ie10+</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
- <span class="hljs-selector-class">.container</span> {
-     <span class="hljs-attribute">display</span>: flex;
- }
- <span class="hljs-selector-class">.main</span> {
-     <span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">1</span>;
-     <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
-     <span class="hljs-attribute">background-color</span>: red;
- }
- <span class="hljs-selector-class">.left</span> {
-     <span class="hljs-attribute">order</span>: -<span class="hljs-number">1</span>;
-     <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">200px</span>;
-     <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">20px</span>;
-     <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
-     <span class="hljs-attribute">background-color</span>: blue;
- }
- <span class="hljs-selector-class">.right</span> {
-     <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">100px</span>;
-     <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">20px</span>;
-     <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
-     <span class="hljs-attribute">background-color</span>: green;
- }
- </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-class">.container</span> {
+        <span class="hljs-attribute">display</span>: flex;
+    }
+    <span class="hljs-selector-class">.main</span> {
+        <span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">1</span>;
+        <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
+        <span class="hljs-attribute">background-color</span>: red;
+    }
+    <span class="hljs-selector-class">.left</span> {
+        <span class="hljs-attribute">order</span>: -<span class="hljs-number">1</span>;
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">200px</span>;
+        <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">20px</span>;
+        <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
+        <span class="hljs-attribute">background-color</span>: blue;
+    }
+    <span class="hljs-selector-class">.right</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">100px</span>;
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">20px</span>;
+        <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
+        <span class="hljs-attribute">background-color</span>: green;
+    }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;main&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;left&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
- <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;main&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;left&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?^%$" target="_blank">&#x5173;&#x4E8E;flex&#x5E03;&#x5C40;</a></li>
-</ol>
-<ol>
-<li>table&#x5E03;&#x5C40;(&#x65E0;&#x6CD5;&#x8BBE;&#x7F6E;&#x680F;&#x95F4;&#x8DDD;)</li>
-</ol>
+<p><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?^%$" target="_blank">&#x5173;&#x4E8E;flex&#x5E03;&#x5C40;</a></p>
+<h3 id="5-table&#x5E03;&#x5C40;&#x65E0;&#x6CD5;&#x8BBE;&#x7F6E;&#x680F;&#x95F4;&#x8DDD;">5. table&#x5E03;&#x5C40;(&#x65E0;&#x6CD5;&#x8BBE;&#x7F6E;&#x680F;&#x95F4;&#x8DDD;)</h3>
 <pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
@@ -559,48 +526,46 @@ ie10+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;<
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<ol>
-<li>&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x5E03;&#x5C40;<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<h3 id="6-&#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x5E03;&#x5C40;">6. &#x7EDD;&#x5BF9;&#x5B9A;&#x4F4D;&#x5E03;&#x5C40;</h3>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
- <span class="hljs-selector-class">.container</span> {
-     <span class="hljs-attribute">position</span>: relative;
- }
- <span class="hljs-selector-class">.main</span> {
-     <span class="hljs-attribute">height</span>: <span class="hljs-number">400px</span>;
-     <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">120px</span>;
-     <span class="hljs-attribute">background-color</span>: green;
- }
- <span class="hljs-selector-class">.left</span> {
-     <span class="hljs-attribute">position</span>: absolute;
-     <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
-     <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
-     <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
-     <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
-     <span class="hljs-attribute">background-color</span>: red;
- }
- <span class="hljs-selector-class">.right</span> {
-     <span class="hljs-attribute">position</span>: absolute;
-     <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
-     <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
-     <span class="hljs-attribute">background-color</span>: blue;
-         <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
-     <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
- }
- </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-class">.container</span> {
+        <span class="hljs-attribute">position</span>: relative;
+    }
+    <span class="hljs-selector-class">.main</span> {
+        <span class="hljs-attribute">height</span>: <span class="hljs-number">400px</span>;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">120px</span>;
+        <span class="hljs-attribute">background-color</span>: green;
+    }
+    <span class="hljs-selector-class">.left</span> {
+        <span class="hljs-attribute">position</span>: absolute;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+        <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
+        <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">background-color</span>: red;
+    }
+    <span class="hljs-selector-class">.right</span> {
+        <span class="hljs-attribute">position</span>: absolute;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+        <span class="hljs-attribute">height</span>: <span class="hljs-number">300px</span>;
+        <span class="hljs-attribute">background-color</span>: blue;
+            <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+    }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
-     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;main&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;left&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
- <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;main&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;left&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;right&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-</li>
-</ol>
 
                             </div>
                             
@@ -656,7 +621,7 @@ ie10+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;<
 
 <script>
 (function() {
-    gitbook.page.hasChanged({"page":{"title":"css部分","level":"1.2","depth":1,"next":{"title":"js部分","level":"1.3","depth":1,"path":"docs/JS.md","ref":"docs/JS.md","articles":[]},"previous":{"title":"关于","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-lunr","-search","search-pro","theme-official","sitemap-general"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sitemap-general":{"prefix":"http://116.196.113.15:4000/"},"search-pro":{},"highlight":{},"theme-official":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","head_keywords":"前端,知识,总结","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端知识点总结","language":"zh-hans","head_title":"前端知识点总结","gitbook":">= 3.0.0","head_description":"前端知识点总结"},"file":{"path":"docs/CSS.md","mtime":"2018-02-28T13:35:38.549Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-28T13:39:14.725Z"},"basePath":"..","book":{"language":""}});
+    gitbook.page.hasChanged({"page":{"title":"css部分","level":"1.2","depth":1,"next":{"title":"js部分","level":"1.3","depth":1,"path":"docs/JS.md","ref":"docs/JS.md","articles":[]},"previous":{"title":"关于","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-lunr","-search","search-pro","theme-official","sitemap-general"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sitemap-general":{"prefix":"http://116.196.113.15:4000/"},"search-pro":{},"highlight":{},"theme-official":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","head_keywords":"前端,知识,总结","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端知识点总结","language":"zh-hans","head_title":"前端知识点总结","gitbook":">= 3.0.0","head_description":"前端知识点总结"},"file":{"path":"docs/CSS.md","mtime":"2018-02-28T14:29:32.628Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-28T14:53:31.556Z"},"basePath":"..","book":{"language":""}});
 })();
 </script>
 
