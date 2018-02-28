@@ -1,0 +1,81 @@
+publishing...
+Live reload server started on port: 35729
+Press CTRL+C to quit ...
+
+[0;36minfo:[0m 10 plugins are installed 
+[0;36minfo:[0m 6 explicitly listed 
+[0;36minfo:[0m loading plugin "search-pro"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "sitemap-general"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "livereload"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "highlight"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "theme-official"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "theme-default"... [0;32mOK[0m 
+[0;36minfo:[0m found 3 pages 
+[0;36minfo:[0m found 5 asset files 
+[0;36minfo:[0m [0;32m>> [0mgeneration finished with success in 1.9s ! 
+
+Starting server ...
+Serving book on http://localhost:4000
+publishing...
+Live reload server started on port: 35729
+Press CTRL+C to quit ...
+
+[0;36minfo:[0m 10 plugins are installed 
+[0;36minfo:[0m 6 explicitly listed 
+[0;36minfo:[0m loading plugin "search-pro"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "sitemap-general"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "livereload"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "highlight"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "theme-official"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "theme-default"... [0;32mOK[0m 
+[0;36minfo:[0m found 3 pages 
+[0;36minfo:[0m found 5 asset files 
+[0;36minfo:[0m [0;32m>> [0mgeneration finished with success in 1.8s ! 
+
+Starting server ...
+Serving book on http://localhost:4000
+Hangup
+publishing...
+Live reload server started on port: 35729
+Press CTRL+C to quit ...
+
+[0;36minfo:[0m 10 plugins are installed 
+[0;36minfo:[0m 6 explicitly listed 
+[0;36minfo:[0m loading plugin "search-pro"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "sitemap-general"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "livereload"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "highlight"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "theme-official"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "theme-default"... [0;32mOK[0m 
+[0;36minfo:[0m found 3 pages 
+[0;36minfo:[0m found 5 asset files 
+[0;36minfo:[0m [0;32m>> [0mgeneration finished with success in 1.8s ! 
+
+Starting server ...
+Serving book on http://localhost:4000
+Hangup
+publishing...
+Live reload server started on port: 35729
+Press CTRL+C to quit ...
+
+[0;36minfo:[0m 10 plugins are installed 
+[0;36minfo:[0m 6 explicitly listed 
+[0;36minfo:[0m loading plugin "search-pro"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "sitemap-general"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "livereload"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "highlight"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "theme-official"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "theme-default"... [0;32mOK[0m 
+[0;36minfo:[0m found 3 pages 
+[0;36minfo:[0m found 5 asset files 
+[0;36minfo:[0m [0;32m>> [0mgeneration finished with success in 1.7s ! 
+
+Starting server ...
+Serving book on http://localhost:4000
+Hangup
+
+[0;31mError: Command server doesn't exist, run "gitbook help" to list commands.[0m
+收到请求
+Received a push event for FE-interview to refs/heads/master
+Updating fe3a10b..6b5bf0c
+

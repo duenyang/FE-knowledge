@@ -1,9 +1,9 @@
 {
     "root": "./",
-    "title": "前端面试知识点总结",
-    "head_title": "前端面试知识点总结",
-    "head_description": "前端面试知识点总结",
-    "head_keywords": "前端,面试,总结",
+    "title": "前端知识点总结",
+    "head_title": "前端知识点总结",
+    "head_description": "前端知识点总结",
+    "head_keywords": "前端,知识,总结",
 
     "gitbook": ">= 3.0.0",
 

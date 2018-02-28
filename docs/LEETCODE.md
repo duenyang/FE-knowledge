@@ -1,5 +1,7 @@
 # leetCode算法题目加答案
 
+你也可以去试试[leetCode(中国)](https://leetcodechina.com/)的算法题
+
 ## 数组部分
 
 1. 数组去重
