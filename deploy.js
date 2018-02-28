@@ -1,7 +1,7 @@
 var http = require('http')
 var createHandler = require('github-webhook-handler')
 var handler = createHandler({
-    path: '/incoming',
+    path: '/webhook',
     secret: 'duenyang'
 })
 // 上面的 secret 保持和 GitHub 后台设置的一致
@@ -23,6 +23,7 @@ function run_cmd(cmd, args, callback) {
 http.createServer(function (req, res) {
     console.log('收到请求');
     handler(req, res, function (err) {
+        console.log('执行 github-webhook-handler')
         res.statusCode = 404
         res.end('no such location')
     })
