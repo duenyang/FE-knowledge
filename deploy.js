@@ -21,7 +21,7 @@ function run_cmd(cmd, args, callback) {
 }
 
 http.createServer(function (req, res) {
-    console.log(req);
+    console.log('收到请求');
     handler(req, res, function (err) {
         res.statusCode = 404
         res.end('no such location')
