@@ -1,14 +1,3 @@
-# css
-
-## display有哪几种常用属性:
-`none`、`block`、`flex`、`inline`、`inline-block`、`table`、`table-cell`、`inherit`
-
-[查看更多属性](http://www.w3school.com.cn/jsref/prop_style_display.asp)
-
-## position有哪几种常用属性
-`absolute`、`relative`、`fixed`、`static`、`inherit`
-
-[查看更多属性](http://www.w3school.com.cn/cssref/pr_class_position.asp)
 
 ## 实现垂直居中的方法
 

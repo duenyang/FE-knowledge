@@ -1,4 +1,4 @@
-# JavaScript面试知识点
+# JavaScript一些知识点
 
 [ES6](https://www.jianshu.com/p/ebfeb687eb70)
 
@@ -61,7 +61,7 @@ function ajaxRequest(type, url, data){
     }
 ```
 
-bind
+bind的实现
 
 ```js
 Function.prototype.bind = function(context){
