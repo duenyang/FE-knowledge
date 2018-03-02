@@ -48,6 +48,73 @@ console.log(Fibonacci(7));//13
 console.log(Fibonacci(8));//21
 ```
 
+### 数组的交、差、并
+
+```js
+var a = [1, 2, 3, NaN];
+var b = [2, 4, 5];
+
+// ES7
+// 数组的并集
+let union = a.concat(b.filter(v => !a.includes(v)));
+console.log(union); // [1,2,3,4,5]
+
+// 数组的交集
+let intersection = a.filter(v => b.includes(v));
+console.log(intersection); // [2]
+
+//  数组的差集
+let difference = a.concat(b).filter(v => !a.includes(v) || !b.includes(v));
+console.log(difference); // [1, 3, 4, ,5]
+
+// ES6
+let aSet = new Set(a);
+let bSet = new Set(b);
+// 并集
+let union = Array.from(new Set(a.concat(b)));
+console.log(union);
+// 交集
+let inheritAttrs = Array.from(new Set(a.filter(v => bSet.has(v))))
+console.log(inheritAttrs);
+// 差集
+let difference = Array.from(new Set(a.concat(b).filter(v => !aSet.has(v) || !bSet.has(v))))
+console.log(difference);
+
+//ES5
+// 判断是否有NaN出现
+var aHasNaN = a.some(function (v) {
+    return isNaN(v)
+})
+var bHasNaN = b.some(function (v) {
+    return isNaN(v)
+})
+
+//并集
+var union = a.concat(b.filter(function (v) {
+    return a.indexOf(v) === -1 && !isNaN(v)
+})).concat(!aHasNaN & bHasNaN ? [NaN] : []);
+console.log(union);
+
+//交集
+var intersection = a.filter(function (v) {
+    return b.indexOf(v) > -1
+}).concat(!aHasNaN & bHasNaN ? [NaN] : []);
+console.log(intersection);
+
+//差集
+var difference = a.concat(b).filter(function (v) {
+    return (a.indexOf(v) === -1 || b.indexOf(v) === -1) && !isNaN(v)
+}).concat(!aHasNaN & bHasNaN ? [NaN] : [])
+
+for (let i = 0; i < 5; i++) {
+    setTimeout(function () {
+        console.log(i)
+    }, 1000)
+}
+
+
+```
+
 ---
 # 算法题及答案
 ## 数组部分
@@ -62,7 +129,7 @@ var removeDuplicates = function(nums) {
         if(!a[key]){
           a[key] = true;
           b.push(nums[i])
-         }
+        }
     }
     return b
 };

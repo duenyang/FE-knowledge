@@ -229,6 +229,68 @@
 <span class="hljs-built_in">console</span>.log(Fibonacci(<span class="hljs-number">7</span>));<span class="hljs-comment">//13</span>
 <span class="hljs-built_in">console</span>.log(Fibonacci(<span class="hljs-number">8</span>));<span class="hljs-comment">//21</span>
 </code></pre>
+<h3 id="&#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x3001;&#x5DEE;&#x3001;&#x5E76;">&#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x3001;&#x5DEE;&#x3001;&#x5E76;</h3>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-literal">NaN</span>];
+<span class="hljs-keyword">var</span> b = [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+
+<span class="hljs-comment">// ES7</span>
+<span class="hljs-comment">// &#x6570;&#x7EC4;&#x7684;&#x5E76;&#x96C6;</span>
+<span class="hljs-keyword">let</span> union = a.concat(b.filter(v =&gt; !a.includes(v)));
+<span class="hljs-built_in">console</span>.log(union); <span class="hljs-comment">// [1,2,3,4,5]</span>
+
+<span class="hljs-comment">// &#x6570;&#x7EC4;&#x7684;&#x4EA4;&#x96C6;</span>
+<span class="hljs-keyword">let</span> intersection = a.filter(v =&gt; b.includes(v));
+<span class="hljs-built_in">console</span>.log(intersection); <span class="hljs-comment">// [2]</span>
+
+<span class="hljs-comment">//  &#x6570;&#x7EC4;&#x7684;&#x5DEE;&#x96C6;</span>
+<span class="hljs-keyword">let</span> difference = a.concat(b).filter(v =&gt; !a.includes(v) || !b.includes(v));
+<span class="hljs-built_in">console</span>.log(difference); <span class="hljs-comment">// [1, 3, 4, ,5]</span>
+
+<span class="hljs-comment">// ES6</span>
+<span class="hljs-keyword">let</span> aSet = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>(a);
+<span class="hljs-keyword">let</span> bSet = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>(b);
+<span class="hljs-comment">// &#x5E76;&#x96C6;</span>
+<span class="hljs-keyword">let</span> union = <span class="hljs-built_in">Array</span>.from(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>(a.concat(b)));
+<span class="hljs-built_in">console</span>.log(union);
+<span class="hljs-comment">// &#x4EA4;&#x96C6;</span>
+<span class="hljs-keyword">let</span> inheritAttrs = <span class="hljs-built_in">Array</span>.from(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>(a.filter(v =&gt; bSet.has(v))))
+<span class="hljs-built_in">console</span>.log(inheritAttrs);
+<span class="hljs-comment">// &#x5DEE;&#x96C6;</span>
+<span class="hljs-keyword">let</span> difference = <span class="hljs-built_in">Array</span>.from(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>(a.concat(b).filter(v =&gt; !aSet.has(v) || !bSet.has(v))))
+<span class="hljs-built_in">console</span>.log(difference);
+
+<span class="hljs-comment">//ES5</span>
+<span class="hljs-comment">// &#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;NaN&#x51FA;&#x73B0;</span>
+<span class="hljs-keyword">var</span> aHasNaN = a.some(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">v</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">isNaN</span>(v)
+})
+<span class="hljs-keyword">var</span> bHasNaN = b.some(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">v</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">isNaN</span>(v)
+})
+
+<span class="hljs-comment">//&#x5E76;&#x96C6;</span>
+<span class="hljs-keyword">var</span> union = a.concat(b.filter(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">v</span>) </span>{
+    <span class="hljs-keyword">return</span> a.indexOf(v) === <span class="hljs-number">-1</span> &amp;&amp; !<span class="hljs-built_in">isNaN</span>(v)
+})).concat(!aHasNaN &amp; bHasNaN ? [<span class="hljs-literal">NaN</span>] : []);
+<span class="hljs-built_in">console</span>.log(union);
+
+<span class="hljs-comment">//&#x4EA4;&#x96C6;</span>
+<span class="hljs-keyword">var</span> intersection = a.filter(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">v</span>) </span>{
+    <span class="hljs-keyword">return</span> b.indexOf(v) &gt; <span class="hljs-number">-1</span>
+}).concat(!aHasNaN &amp; bHasNaN ? [<span class="hljs-literal">NaN</span>] : []);
+<span class="hljs-built_in">console</span>.log(intersection);
+
+<span class="hljs-comment">//&#x5DEE;&#x96C6;</span>
+<span class="hljs-keyword">var</span> difference = a.concat(b).filter(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">v</span>) </span>{
+    <span class="hljs-keyword">return</span> (a.indexOf(v) === <span class="hljs-number">-1</span> || b.indexOf(v) === <span class="hljs-number">-1</span>) &amp;&amp; !<span class="hljs-built_in">isNaN</span>(v)
+}).concat(!aHasNaN &amp; bHasNaN ? [<span class="hljs-literal">NaN</span>] : [])
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) {
+    setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(i)
+    }, <span class="hljs-number">1000</span>)
+}
+</code></pre>
 <hr>
 <h1 id="&#x7B97;&#x6CD5;&#x9898;&#x53CA;&#x7B54;&#x6848;">&#x7B97;&#x6CD5;&#x9898;&#x53CA;&#x7B54;&#x6848;</h1>
 <h2 id="&#x6570;&#x7EC4;&#x90E8;&#x5206;">&#x6570;&#x7EC4;&#x90E8;&#x5206;</h2>
@@ -242,7 +304,7 @@
         <span class="hljs-keyword">if</span>(!a[key]){
           a[key] = <span class="hljs-literal">true</span>;
           b.push(nums[i])
-         }
+        }
     }
     <span class="hljs-keyword">return</span> b
 };
@@ -287,7 +349,7 @@
                     <a href="#">Return to the top</a>
                 </li>
                 <li>
-                    <a href="#">Updated Feb 28th 18</a>
+                    <a href="#">Updated Mar 2nd 18</a>
                 </li>
             </ul>
         </div>
@@ -306,7 +368,7 @@
 
 <script>
 (function() {
-    gitbook.page.hasChanged({"page":{"title":"leetCode算法题","level":"1.4","depth":1,"previous":{"title":"js部分","level":"1.3","depth":1,"path":"docs/JS.md","ref":"docs/JS.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-lunr","-search","search-pro","theme-official","sitemap-general"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sitemap-general":{"prefix":"http://116.196.113.15:4000/"},"search-pro":{},"highlight":{},"theme-official":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","head_keywords":"前端,知识,总结","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端知识点总结","language":"zh-hans","head_title":"前端知识点总结","gitbook":">= 3.0.0","head_description":"前端知识点总结"},"file":{"path":"docs/LEETCODE.md","mtime":"2018-02-28T14:44:29.573Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-28T14:53:31.556Z"},"basePath":"..","book":{"language":""}});
+    gitbook.page.hasChanged({"page":{"title":"leetCode算法题","level":"1.4","depth":1,"previous":{"title":"js部分","level":"1.3","depth":1,"path":"docs/JS.md","ref":"docs/JS.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-lunr","-search","search-pro","theme-official","sitemap-general"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sitemap-general":{"prefix":"http://116.196.113.15:4000/"},"search-pro":{},"highlight":{},"theme-official":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","head_keywords":"前端,知识,总结","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"前端知识点总结","language":"zh-hans","head_title":"前端知识点总结","gitbook":">= 3.0.0","head_description":"前端知识点总结"},"file":{"path":"docs/LEETCODE.md","mtime":"2018-03-02T07:47:10.388Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-02T07:47:24.885Z"},"basePath":"..","book":{"language":""}});
 })();
 </script>
 
