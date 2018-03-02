@@ -4,6 +4,6 @@
 
 #### 持续更新ing...
 
-#### [线上访问地址](http://116.196.113.15:4000/)
+#### [线上访问地址](http://gitbook.niubicoder.com/)
 
 #### [项目地址](https://github.com/duenyang/FE-interview),欢迎一起完善
