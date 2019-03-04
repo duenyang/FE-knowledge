@@ -6,6 +6,6 @@
 
 #### 持续更新ing...
 
-#### ~[线上访问地址](http://gitbook.niubicoder.com/)~ 该服务器过期，重构服务器中。。。
+#### ~[线上访问地址](http://gitbook.niubicoder.com/)~ 该服务器过期，重购服务器中。。。
 
 #### [项目地址](https://github.com/duenyang/FE-interview),欢迎一起完善
